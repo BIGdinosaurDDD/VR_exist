@@ -5,7 +5,7 @@ using UnityEngine;
 public class LegGameManager : MonoBehaviour
 {
 
-    public LegListener myLegListener;
+    public LegListener2 myLegListener2;
     public WoodBridge myWoodBridge;
 
     float ArduinoResult;
@@ -22,8 +22,8 @@ public class LegGameManager : MonoBehaviour
         SendResult();
     }
 
-    void GetArduinoResult() {
-        ArduinoResult = myLegListener.msgResult;
+    void GetArduinoResult() { 
+        ArduinoResult = myLegListener2.msgResult;
 
     }
 
