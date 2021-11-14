@@ -60,10 +60,7 @@ public class LegListener2 : MonoBehaviour
         else
             Debug.Log("Message arrived: " + message);
 
-        if (message.Equals("1"))
-            msgResult = 1;
-        if (message.Equals("0"))
-            msgResult = 0;
+        msgResult = float.Parse(message.ToString());
 
     }
 }

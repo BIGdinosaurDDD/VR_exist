@@ -35,7 +35,7 @@ public class JumpManager : MonoBehaviour
 
     void SendResult()
     {
-        if (forceOut > 400f) {
+        if (forceOut >= 700f) {
             myLegJump.Jump(forceOut);
 
         }
