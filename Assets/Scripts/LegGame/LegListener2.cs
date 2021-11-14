@@ -28,6 +28,7 @@ public class LegListener2 : MonoBehaviour
     void OnMessageArrived(string msg)
     {
         Debug.Log("Message arrived: " + msg);
+        msgResult = float.Parse(msg);
     }
 
     // Invoked when a connect/disconnect event occurs. The parameter 'success'
@@ -60,7 +61,7 @@ public class LegListener2 : MonoBehaviour
         else
             Debug.Log("Message arrived: " + message);
 
-        msgResult = float.Parse(message.ToString());
 
+        
     }
 }

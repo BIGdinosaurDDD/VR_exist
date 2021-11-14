@@ -40,24 +40,29 @@ public class LegJump : MonoBehaviour
 
     private void Update(){
 
-        if (cooldown > 0f) {
-            //每一秒cooldown会减一
-            cooldown -= Time.deltaTime;
-
-            if (cooldown <= 0) {
-                cooldown = 0;
-                ifCanJump = true;
-            }
-        }
+        DetectInAir();
 
         // 打开测试跳跃功能
         OpenTest();
 
     }
-    private void OnMouseDown()
+    void DetectInAir()
     {
-        Jump(100f);
-        print("Clicked!!!!");
+        // See Order of Execution for Event Functions for information on FixedUpdate() and Update() related to physics queries
+
+        Vector3 down = -1f * transform.TransformDirection(Vector3.up);
+        RaycastHit _hit;
+
+        if (Physics.Raycast(transform.position, down, out _hit, 0.4f))
+        {
+            Debug.DrawRay(transform.position, down * _hit.distance, Color.green);
+            ifCanJump = true;
+        }
+        else {
+            Debug.DrawRay(transform.position, down * _hit.distance, Color.red);
+            ifCanJump = false;
+        }
+
     }
 
     void OpenTest() {
