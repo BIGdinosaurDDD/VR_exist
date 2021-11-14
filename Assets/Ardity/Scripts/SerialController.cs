@@ -105,7 +105,7 @@ public class SerialController : MonoBehaviour
     // special messages that mark the start/end of the communication with the
     // device.
     // ------------------------------------------------------------------------
-    void Update()
+    void LateUpdate()
     {
         // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
@@ -125,6 +125,7 @@ public class SerialController : MonoBehaviour
         else
             messageListener.SendMessage("OnMessageArrived", message);
     }
+
 
     // ------------------------------------------------------------------------
     // Returns a new unread message from the serial device. You only need to

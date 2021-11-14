@@ -24,8 +24,22 @@ public class LegListener2 : MonoBehaviour
 
         Debug.Log("Press A or Z to execute some actions");
     }
+    // Invoked when a line of data is received from the serial device.
+    void OnMessageArrived(string msg)
+    {
+        Debug.Log("Message arrived: " + msg);
+    }
 
-    // Executed each frame
+    // Invoked when a connect/disconnect event occurs. The parameter 'success'
+    // will be 'true' upon connection, and 'false' upon disconnection or
+    // failure to connect.
+    void OnConnectionEvent(bool success)
+    {
+        if (success)
+            Debug.Log("Connection established");
+        else
+            Debug.Log("Connection attempt failed or disconnection detected");
+    }
     void Update()
     {
 
