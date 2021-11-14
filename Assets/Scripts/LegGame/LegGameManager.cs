@@ -29,11 +29,12 @@ public class LegGameManager : MonoBehaviour
 
     void CalculateForce() {
         //公式自行修改
-        forceOut = 10f * ArduinoResult;
+        forceOut = 1000f * ArduinoResult;
     }
 
     void SendResult() {
         myWoodBridge.forceUp = forceOut;
+        myWoodBridge.angleUp = forceOut;
 
     }
 }

@@ -5009,6 +5009,18 @@ Transform:
   m_Father: {fileID: 1189684460}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309949150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 739000515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1310998632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,7 +5333,7 @@ GameObject:
   - component: {fileID: 1520063592}
   - component: {fileID: 1520063591}
   m_Layer: 0
-  m_Name: LegListener
+  m_Name: LegListener2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5336,9 +5348,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1520063590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da9a158771b72504fbf84c1f189c226e, type: 3}
+  m_Script: {fileID: 11500000, guid: f963dafdb25c19c4f89de9ddbf6c1736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serialController: {fileID: 1309949150}
   msgResult: 0
 --- !u!4 &1520063592
 Transform:
@@ -6625,7 +6638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c1cb5a754a6a9489e021cda7ae3fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLegListener: {fileID: 1520063591}
+  myLegListener2: {fileID: 1520063591}
   myWoodBridge: {fileID: 1660879204}
 --- !u!1001 &1783067483
 PrefabInstance:
