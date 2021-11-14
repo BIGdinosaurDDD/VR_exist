@@ -8,6 +8,10 @@ public class LegJump : MonoBehaviour
     public bool ifCanJump;
     float cooldown = 0;
 
+    [Header("Test")]
+    public float _forceTest = 0f;
+    public bool _Jumptest;
+
     public void Jump( float _force) {
         if (ifCanJump){
 
@@ -31,7 +35,7 @@ public class LegJump : MonoBehaviour
 
     private void Start()
     {
-        Jump(300f);
+
     }
 
     private void Update(){
@@ -46,6 +50,8 @@ public class LegJump : MonoBehaviour
             }
         }
 
+        // 打开测试跳跃功能
+        OpenTest();
 
     }
     private void OnMouseDown()
@@ -53,4 +59,16 @@ public class LegJump : MonoBehaviour
         Jump(100f);
         print("Clicked!!!!");
     }
+
+    void OpenTest() {
+
+        //判断开关是否打开，打开则
+        if (_forceTest > 0f && _Jumptest) {
+            Jump(_forceTest);
+            _Jumptest = false;
+
+        }
+
+    }
+    
 }
