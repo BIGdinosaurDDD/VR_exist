@@ -62,6 +62,14 @@ public class JumpManager : MonoBehaviour
 
     }
 
+    public void TestButtonDown() {
+        testGather = true;
+    }
+    public void TestButtonUp(){
+        testGather = false;
+
+    }
+
     void DetectForce(float _force){
         //公式自行修改
         forceOut = _force;

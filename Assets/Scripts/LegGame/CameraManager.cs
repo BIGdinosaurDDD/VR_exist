@@ -10,13 +10,12 @@ public class CameraManager : MonoBehaviour
     Vector3 targetLastPosition;
 
 
-    private void Awake()
-    {
+    private void Awake(){
         targetLastPosition = myLeg.transform.position;
     }
     private void Update(){
 
-        offsetVector = myLeg.transform.right * -1f * offsetDistance +Vector3.up *1.2f;
+        offsetVector = (Vector3.right * -0.5f  +Vector3.up *1f + Vector3.forward * 1f ).normalized * offsetDistance;
         Vector3 targetPosition = Vector3.Lerp(targetLastPosition,myLeg.transform.position, 0.01f);
 
         LookAtLeg(offsetVector,targetPosition);
@@ -30,8 +29,6 @@ public class CameraManager : MonoBehaviour
         Vector3 finalPos = _targetPosition + _offsetVector;
         transform.position = Vector3.Lerp(transform.position, finalPos, 0.01f);
         transform.LookAt(_targetPosition, Vector3.up);
-
-
 
     }
 
