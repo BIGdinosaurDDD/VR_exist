@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   threshold:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.9
     min: 0
   intensity:
@@ -33,7 +33,7 @@ MonoBehaviour:
     min: 0
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.5282807, b: 0.495283, a: 1}
+    m_Value: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -64,18 +64,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   type:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   intensity:
     m_OverrideState: 1
     m_Value: 0.689
     min: 0
     max: 1
   response:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.8
     min: 0
     max: 1
@@ -228,12 +228,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.15
+    m_Value: 0.383
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.35
+    m_Value: 0.562
     min: 0.01
     max: 1
   rounded:

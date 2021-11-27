@@ -101,7 +101,7 @@ public class JumpManager : MonoBehaviour
     }
 
     void UpdateUI() {
-        float _max = 800f;
+        float _max = 1000f;
         float _min = 0f;
         powerSlider.value = Remap(forceGathered, _min, _max, 0f, 1f);
 
